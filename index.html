@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Sistemas Operativos</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Menú dinámico de opciones (Navegación fija) */
+        header {
+            background: #1e293b;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Contenido principal */
+        main {
+            max-width: 1100px;
+            margin: 100px auto 40px auto;
+            padding: 20px;
+        }
+
+        section {
+            background: #fff;
+            margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h1, h2 {
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            border-bottom: 3px solid #38bdf8;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #475569;
+        }
+
+        /* Cuadrícula para problemas y soluciones */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #f8fafc;
+            border-left: 4px solid #38bdf8;
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        .card h3 {
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+
+        /* Footer / Contacto */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        footer h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            color: #94a3b8;
+            margin: 5px 0;
+        }
+
+        /* Responsivo para pantallas pequeñas */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 15px;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menú dinámico de opciones -->
+    <header>
+        <nav>
+            <div class="logo">Sistemas Operativos</div>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#info">Información</a></li>
+                <li><a href="#problemas">Problemas y Soluciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de Inicio / Bienvenida -->
+        <section id="inicio">
+            <h1>Bienvenido al Portal de Sistemas Operativos</h1>
+            <p>Un sistema operativo (SO) es el software principal o conjunto de programas de un sistema informático que gestiona los recursos de hardware y provee servicios a los programas de aplicación de software.</p>
+            <p>Explora este sitio para conocer sus fundamentos, así como los problemas más habituales que enfrentan y cómo solucionarlos de manera eficiente.</p>
+        </section>
+
+        <!-- Información Básica -->
+        <section id="info">
+            <h2>Información Básica</h2>
+            <p>El sistema operativo actúa como intermediario entre el usuario y el hardware de la computadora. Sus funciones principales incluyen la gestión de procesos, la administración de la memoria principal, el control de los dispositivos de entrada/salida y la administración de archivos.</p>
+            <p>Ejemplos clásicos de sistemas operativos modernos incluyen <strong>Windows</strong>, <strong>Linux</strong>, <strong>macOS</strong>, <strong>Android</strong> e <strong>iOS</strong>, cada uno adaptado a arquitecturas y necesidades específicas de procesamiento.</p>
+        </section>
+
+        <!-- Problemas y Soluciones -->
+        <section id="problemas">
+            <h2>Problemas Comunes y Soluciones</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>1. LENTITUD DEL SISTEMA</h3>
+                    <p><strong>Problema:</strong> Saturación en el uso de memoria RAM y procesos en segundo plano innecesarios que ralentizan la respuesta del equipo.</p>
+                    <p><strong>Solución:</strong> Administrar las aplicaciones de inicio mediante el Administrador de Tareas, desinstalar software que no se utilice y liberar espacio en disco.</p>
+                </div>
+                <div class="card">
+                    <h3>2. PANTALLAS AZULES O FALLOS DE NÚCLEO</h3>
+                    <p><strong>Problema:</strong> Incompatibilidad de controladores (drivers), fallos de hardware o corrupción en archivos esenciales del sistema operativo.</p>
+                    <p><strong>Solución:</strong> Actualizar o reinstalar los controladores afectados, ejecutar diagnósticos de memoria y utilizar herramientas de reparación del sistema (como SFC).</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer con información de contacto -->
+    <footer id="contacto">
+        <h3>Información de Contacto</h3>
+        <div class="contact-info">
+            <p><strong>Desarrollador:</strong> Eduardo Argueta</p>
+            <p><strong>Correo Electrónico:</strong> contacto@univo.edu.sv</p>
+            <p><strong>Institución:</strong> Universidad de Oriente (UNIVO)</p>
+            <p>&copy; 2026 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
